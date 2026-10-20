@@ -148,11 +148,17 @@ h3{font-family:var(--disp);letter-spacing:-.02em}
 .mut{margin:0 0 1.4rem;color:var(--mut);max-width:52ch}
 
 /* contact */
-.contact a.big{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font:600 clamp(1.25rem,4.6vw,2.7rem)/1.15 var(--disp);letter-spacing:-.03em;overflow-wrap:anywhere;transition:color .2s,padding .3s cubic-bezier(.2,.8,.2,1),border-color .2s}
+.contact a.big{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem .2rem;border-bottom:1px solid var(--line);font:600 clamp(1.25rem,4.6vw,2.7rem)/1.15 var(--disp);letter-spacing:-.03em;overflow-wrap:anywhere;transition:color .35s,padding .45s cubic-bezier(.2,.8,.2,1)}
 .contact a.big:first-of-type{border-top:1px solid var(--line)}
-.contact a.big i{font-style:normal;flex:none;color:var(--acc);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
-.contact a.big:hover{color:var(--acc);padding-left:.8rem;border-color:var(--acc)}
-.contact a.big:hover i{transform:translate(4px,-4px)}
+/* hover: an accent panel sweeps in from the left, the text slides in and the arrow turns */
+.contact a.big::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--acc);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.contact a.big i{font-style:normal;flex:none;color:var(--acc);transition:transform .45s cubic-bezier(.2,.8,.2,1),color .35s}
+@media(hover:hover){
+  .contact a.big:hover{color:var(--on-acc);padding-inline:1.2rem}
+  .contact a.big:hover::before{transform:scaleX(1)}
+  .contact a.big:hover i{color:var(--on-acc);transform:rotate(45deg) scale(1.15)}
+}
+.contact a.big:active::before{transform:scaleX(1)}
 footer{padding:1.4rem 0 calc(1.4rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--mut);font-size:.88rem}
 
 /* lightbox */

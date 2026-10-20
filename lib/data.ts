@@ -3,7 +3,7 @@ export type L = Record<Lang, string>;
 
 export const PROFILE = { photo: "/assets/profile.jpg" };
 export const EMAIL = "amime.bouzid07@gmail.com";
-export const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}&su=${encodeURIComponent("Projet web")}`;
+export const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`;
 export const PHONE = "+216 42 283 007";
 export const WA = "https://wa.me/21642283007";
 

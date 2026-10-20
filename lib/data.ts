@@ -33,8 +33,8 @@ export const PROJECTS: {
       en: "Framed poster and sticker brand: online store with a catalogue, custom orders, packaging and social media ads.",
     },
     result: {
-      fr: "Catalogue de plus de 400 produits. Environ 40 000 personnes touchées en une semaine pour 1 $ de publicité par jour (portée, pas ventes).",
-      en: "Catalogue of 400+ products. About 40,000 people reached in one week for $1 a day in ads (reach, not sales).",
+      fr: "Catalogue de plus de 40 produits. Environ 40 000 personnes touchées en une semaine pour 1 $ de publicité par jour (portée, pas ventes).",
+      en: "Catalogue of 40+ products. About 40,000 people reached in one week for $1 a day in ads (reach, not sales).",
     },
     tags: ["E-commerce", "Next.js", "Publicité sociale"],
     url: "https://stikkyv252.vercel.app/",

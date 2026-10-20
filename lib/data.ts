@@ -88,8 +88,8 @@ export const UI = {
   servicesH: { fr: "Ce que je peux construire pour vous.", en: "What I can build for you." },
   aboutH: { fr: "Qui je suis.", en: "Who I am." },
   about1: {
-    fr: "Je suis développeur web et étudiant en informatique. Je conçois et je construis des sites, des boutiques en ligne et des outils de gestion avec Next.js, TypeScript, Tailwind et PostgreSQL.",
-    en: "I’m a web developer and computer science student. I design and build websites, online stores and management tools with Next.js, TypeScript, Tailwind and PostgreSQL.",
+    fr: "Je suis développeur web et étudiant en informatique à l’ISI Ariana . Je conçois et je construis des sites, des boutiques en ligne et des outils de gestion avec Next.js, TypeScript, Tailwind et PostgreSQL.",
+    en: "I’m a web developer and computer science student at ISI Ariana . I design and build websites, online stores and management tools with Next.js, TypeScript, Tailwind and PostgreSQL.",
   },
   about2: {
     fr: "Chaque livraison est vérifiée avant de vous être remise, et je reste disponible après pour les modifications.",

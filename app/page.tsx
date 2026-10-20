@@ -3,7 +3,7 @@ export default function Home() {
     <>
 <div id="bar"></div><div id="cur"></div><div id="ring"></div>
 <header><div className="wrap">
-<a className="logo" href="#top">amine.b</a>
+<a className="logo" href="#top">amine.bouzid studio</a>
 <nav id="nav" aria-label="Navigation"><a href="#projets"><span className="rl"><span data-t="Projets">Projets</span></span></a><a href="#services"><span className="rl"><span data-t="Services">Services</span></span></a><a href="#about"><span className="rl"><span data-t="À propos">À propos</span></span></a><a href="#contact"><span className="rl"><span data-t="Contact">Contact</span></span></a></nav>
 <div className="tools"><button id="fr" aria-pressed="true">FR</button><button id="en" aria-pressed="false">EN</button><button id="mo" aria-pressed="false">Pause animations</button><button id="th" aria-label="Changer de thème">Thème</button></div>
 </div></header>

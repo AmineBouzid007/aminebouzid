@@ -18,8 +18,8 @@ export const PROJECTS: {
       en: "Website for my aunt’s home care service: families, including those abroad, book online and the team manages requests from an admin area.",
     },
     result: {
-      fr: "Prototype en ligne : 6 services, réservation avec suivi des statuts, gestion des clients et des messages.",
-      en: "Live prototype: 6 services, booking with status tracking, client and message management.",
+      fr: "Prêt pour le lancement : 6 services, réservation avec suivi des statuts, gestion des clients et des messages.",
+      en: "Ready for launch : 6 services, booking with status tracking, client and message management.",
     },
     tags: ["Next.js", "TypeScript", "Neon", "Drizzle"],
     url: "https://seniorscare.vercel.app/",
@@ -48,8 +48,8 @@ export const PROJECTS: {
       en: "Night-themed streetwear: black and white identity, a first drop of 4 T-shirts and an online store with cash on delivery.",
     },
     result: {
-      fr: "Boutique en ligne publiée : T-shirts à 55 TND, livraison dans toute la Tunisie, page de suivi de commande.",
-      en: "Live online store: T-shirts at 55 TND, delivery across Tunisia, order tracking page.",
+      fr: "Boutique en ligne prête à lancer : T-shirts à 55 TND, livraison dans toute la Tunisie, page de suivi de commande.",
+      en: "Online store, ready for launch : T-shirts at 55 TND, delivery across Tunisia, order tracking page.",
     },
     tags: ["Branding", "Photoshop", "Boutique en ligne"],
     url: "https://noct-store-phi.vercel.app/",

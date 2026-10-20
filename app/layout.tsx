@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const title = "Amine Bouzid, développeur web";
+const title = "Amine Bouzid - Personal Portfolio";
 const description =
   "Développeur web en Tunisie : sites, boutiques en ligne, réservation et tableaux de bord pour commerces, marques locales et établissements de soins.";
 

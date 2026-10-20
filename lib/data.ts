@@ -106,7 +106,7 @@ export const UI = {
   call: { fr: "Appeler", en: "Call" },
   stack: { fr: "Stack", en: "Stack" },
   footer: { fr: "© 2026 Amine Bouzid, Tunisie", en: "© 2026 Amine Bouzid, Tunisia" },
-  title: { fr: "Amine Bouzid, développeur web", en: "Amine Bouzid, web developer" },
+  title: { fr: "Amine Bouzid - Portfolio personnel", en: "Amine Bouzid - Personal Portfolio" },
 };
 
 export const ABOUT_STACK_LABEL = { fr: "Outils", en: "Tools" };

@@ -176,3 +176,15 @@ html[data-motion="off"] *,html[data-motion="off"] *::before,html[data-motion="of
   .tools button{padding:0 .65rem}
   .icon-btn,.burger{width:36px}
 }
+
+/* custom cursor (only shown once a real mouse has moved, see components/Cursor.tsx) */
+.cur-dot,.cur-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:200;opacity:0;transition:opacity .25s;will-change:transform}
+.cur-dot span,.cur-ring span{position:absolute;border-radius:50%;display:block}
+.cur-dot span{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--acc)}
+.cur-ring span{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--acc);transition:width .3s cubic-bezier(.2,.8,.2,1),height .3s cubic-bezier(.2,.8,.2,1),margin .3s cubic-bezier(.2,.8,.2,1),background .3s,transform .2s}
+.cur-ring[data-state="link"] span{width:64px;height:64px;margin:-32px 0 0 -32px;background:color-mix(in srgb,var(--acc) 18%,transparent)}
+.cur-ring[data-state="view"] span{width:84px;height:84px;margin:-42px 0 0 -42px;border-style:dashed}
+.cur-ring[data-press] span{transform:scale(.82)}
+html.has-cursor .cur-dot,html.has-cursor .cur-ring{opacity:1}
+html.has-cursor,html.has-cursor a,html.has-cursor button,html.has-cursor .shots img,html.has-cursor .lb{cursor:none}
+@media(hover:none),(pointer:coarse){.cur-dot,.cur-ring{display:none}}

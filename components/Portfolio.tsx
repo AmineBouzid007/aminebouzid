@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import GridHero from "./GridHero";
 import HeroName from "./HeroName";
 import ProjectRow from "./ProjectRow";
+import Cursor from "./Cursor";
 import {
-  ABOUT_STACK_LABEL, CLOSE, EMAIL, MENU, PHONE, PROFILE, PROJECTS, SERVICES, SKIP, STACK, UI, WA, type Lang,
+  ABOUT_STACK_LABEL, CLOSE, EMAIL, GMAIL_COMPOSE, MENU, PHONE, PROFILE, PROJECTS, SERVICES, SKIP, STACK, UI, WA, type Lang,
 } from "@/lib/data";
 
 type Theme = "dark" | "light";
@@ -87,12 +88,20 @@ export default function Portfolio() {
   }, []);
 
   const nav: [string, string][] = [["projets", UI.nav.projects[lang]], ["services", UI.nav.services[lang]], ["about", UI.nav.about[lang]], ["contact", UI.nav.contact[lang]]];
+  // desktop: open Gmail's compose window with my address filled in; phones/tablets keep mailto so the Gmail app opens
+  const openGmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!matchMedia("(hover: hover) and (pointer: fine)").matches || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    const w = window.open(GMAIL_COMPOSE, "_blank");
+    if (w) w.opener = null; else location.href = `mailto:${EMAIL}`; // popup blocked: fall back to mailto
+  };
   const toggleMotion = () => { const v = !paused; setPaused(v); save("motion", v ? "off" : "on"); };
   const toggleLang = () => { const v: Lang = lang === "fr" ? "en" : "fr"; setLang(v); save("lang", v); };
   const toggleTheme = () => { const v: Theme = theme === "dark" ? "light" : "dark"; setTheme(v); save("theme", v); };
 
   return (
     <>
+      <Cursor paused={paused} />
       <a className="skip" href="#projets">{SKIP[lang]}</a>
       <div id="bar" aria-hidden="true" />
 
@@ -175,7 +184,7 @@ export default function Portfolio() {
 
         <section id="contact" className="contact"><div className="wrap">
           <h2 className="reveal">{UI.contactH[lang]}</h2>
-          <a className="big reveal" href={`mailto:${EMAIL}`}><span>{EMAIL}</span><i aria-hidden="true">↗</i></a>
+          <a className="big reveal" href={`mailto:${EMAIL}`} onClick={openGmail}><span>{EMAIL}</span><i aria-hidden="true">↗</i></a>
           <a className="big reveal" href={WA} target="_blank" rel="noopener noreferrer"><span>{UI.whatsapp[lang]} : {PHONE}</span><i aria-hidden="true">↗</i></a>
           <a className="big reveal" href="tel:+21642283007"><span>{UI.call[lang]} : {PHONE}</span><i aria-hidden="true">↗</i></a>
         </div></section>
